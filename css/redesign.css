@@ -297,9 +297,11 @@ img { max-width: 100%; }
 .closing-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 40%; }
 /* 경고 가림막: 배너 전체를 덮음. 닫힌 동안 안쪽 내용은 보이지 않고, 포커스·화면 낭독기에서도 빠짐 */
 .closing-cta:not(.is-open) > .closing-copy, .closing-cta:not(.is-open) > .closing-photo { visibility: hidden; }
-.closing-cta.is-open > .closing-copy, .closing-cta.is-open > .closing-photo { animation: photo-in .25s ease-out; }
+/* 열기: 가림막이 0.6초 동안 사라지고(페이드아웃), 내용은 0.3초 뒤부터 1.2초 동안 천천히 나타남(페이드인) */
+.closing-cta.is-open > .closing-copy, .closing-cta.is-open > .closing-photo { animation: photo-in 1.2s ease .3s both; }
 @keyframes photo-in { from { opacity: 0; } }
-.photo-cover { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 24px; text-align: center; background: repeating-linear-gradient(-45deg, #F6E3AE 0 16px, #FBEDC8 16px 32px); }
+.photo-cover { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 24px; text-align: center; background: repeating-linear-gradient(-45deg, #F6E3AE 0 16px, #FBEDC8 16px 32px); transition: opacity .6s ease; }
+.photo-cover.is-fading { opacity: 0; pointer-events: none; }
 .photo-warn { margin: 0; padding: 4px 12px; background: var(--ink); color: var(--butter); border-radius: 4px; font-family: var(--font-pixel); font-size: 15px; font-weight: 700; letter-spacing: 1px; }
 .photo-warn span { margin-right: 2px; }
 .photo-warn-text { margin: 6px 0 10px; font-family: var(--font-pixel); font-size: 24px; line-height: 1.4; color: var(--ink); word-break: keep-all; }
