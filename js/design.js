@@ -23,8 +23,8 @@
   document.querySelectorAll('[data-stat="categories"]').forEach(el => { el.textContent = CATEGORIES.length; });
   // These counts update automatically when Claude updates services.js.
 
-  // 하단 배너 일러스트: 경고 문구로 가려 두고, 열기/닫기로 보여 줌
-  const photo = document.getElementById('closingPhoto');
+  // 하단 배너: 경고 문구로 배너 전체를 가려 두고, 열기/닫기로 보여 줌
+  const photo = document.getElementById('closingCta');
   const photoOpen = document.getElementById('photoOpen');
   const photoClose = document.getElementById('photoClose');
   function setPhoto(open) {
