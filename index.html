@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>픽셀캣 AI | 나에게 맞는 AI를 찾는 즐거움</title>
+  <meta name="description" content="분야와 요금으로 AI 서비스를 탐색하고, 직접 써 본 소감을 확인하세요. 픽셀 고양이와 함께하는 AI 서비스 도감.">
+  <meta property="og:title" content="픽셀캣 AI 서비스 툴">
+  <meta property="og:description" content="나에게 맞는 AI를 찾는 즐거움. 분야별 서비스, 요금, 직접 써 본 소감을 한곳에서.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#FFE6DC">
+
+  <!-- 파비콘 -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- 웹폰트: 픽셀 제목 Galmuri, 본문 Pretendard -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/redesign.css?v=4">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+
+  <!-- =========================================================
+       상단 메뉴
+       ========================================================= -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="픽셀캣 AI 처음으로"><span class="sprite brand-cat" data-sprite="cat" data-skin="orange" data-acc="headphones" aria-hidden="true"></span><span>픽셀캣 <b>AI</b></span></a>
+      <nav class="nav" aria-label="주요 메뉴"><a href="#services">AI 서비스 도감</a><a href="#services" data-action="free">무료 서비스</a><a href="#reviews">써 본 소감</a><a href="#crew">고양이 크루</a></nav>
+      <a class="btn btn-red btn-sm nav-cta" href="#services">AI 찾으러 가기 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- =========================================================
+       히어로
+       ========================================================= -->
+  <section class="discovery-hero" id="top" aria-labelledby="heroTitle">
+    <div class="hero-layout wrap">
+      <div class="discovery-copy">
+        <p class="mini-label"><span class="live-dot"></span> YOUR NEXT FAVORITE AI</p>
+        <h1 id="heroTitle">AI 찾기,<br><span class="title-highlight">이렇게 쉽다냥<span class="title-star" aria-hidden="true">✦</span></span></h1>
+        <p class="discovery-lead">어떤 AI를 써야 할지 고민될 때.<br>분야부터 요금, 직접 써 본 소감까지<br class="mobile-br"> <strong>픽셀캣에서 한눈에.</strong></p>
+        <form class="hero-search" id="heroSearch" role="search">
+          <label class="sr-only" for="heroQuery">어떤 AI가 필요한가요?</label>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+          <input id="heroQuery" type="search" placeholder="어떤 AI가 필요한가요?" autocomplete="off">
+          <button type="submit" aria-label="입력한 서비스 검색">찾기 <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="popular-queries"><span>이런 걸 찾나요?</span><button type="button" data-query="PPT"># PPT 만들기</button><button type="button" data-query="이미지"># 이미지 생성</button><button type="button" data-query="코딩"># 코딩 도우미</button></div>
+        <div class="hero-meta"><span><strong data-stat="services">204</strong>개의 AI 서비스</span><span><strong data-stat="categories">10</strong>개 분야</span><a href="#reviews">직접 써 본 소감 <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="cat-desktop" aria-label="세 마리 픽셀 고양이 크루">
+        <div class="desktop-label"><span aria-hidden="true">✦</span> PIXELCAT'S LITTLE WORKSPACE</div>
+        <figure class="cat-window cheese-window"><figcaption><span><i></i> cheese.exe</span><span aria-hidden="true">− □ ×</span></figcaption><img src="assets/cats/cheese.png?v=3" alt="헤드셋을 쓰고 컴퓨터 앞에서 콜라를 마시는 주황색 픽셀 고양이" fetchpriority="high" width="382" height="396"><div class="window-status"><span class="live-dot"></span> 오늘도 똑똑하게 일하는 중</div></figure>
+        <figure class="cat-window cream-window"><figcaption><span>cream.exe</span><span aria-hidden="true">×</span></figcaption><img src="assets/cats/cream.png?v=3" alt="입을 크게 벌리고 감탄하는 크림색 픽셀 고양이" width="687" height="692"></figure>
+        <figure class="cat-window mackerel-window"><figcaption><span>mackerel.exe</span><span aria-hidden="true">×</span></figcaption><img src="assets/cats/mackerel.png?v=3" alt="멋진 포즈를 취하는 줄무늬 픽셀 고양이" width="670" height="677"></figure>
+        <p class="desktop-speech">이런 AI도 있었다냥?! <span aria-hidden="true">♥</span></p>
+        <span class="desktop-spark spark-one" aria-hidden="true">✦</span><span class="desktop-spark spark-two" aria-hidden="true">✧</span>
+        <div class="desktop-taskbar"><span aria-hidden="true">▦</span><span>탐색 모드 ON</span><span class="taskbar-heart" aria-hidden="true">♥ ♥ ♥</span></div>
+      </div>
+    </div>
+    <div class="hero-bottom wrap"><span>작은 고양이들, 커다란 가능성.</span><a href="#services">스크롤해서 탐색하기 <span aria-hidden="true">↓</span></a></div>
+  </section>
+
+  <!-- =========================================================
+       핵심 기능 카드
+       ========================================================= -->
+  <section class="discovery-shortcuts wrap" id="features" aria-label="서비스 탐색 바로가기">
+    <a class="shortcut shortcut-pink" href="#services" data-action="all"><span class="shortcut-number">01 / EXPLORE</span><div><h2>필요한 분야부터</h2><span class="shortcut-arrow" aria-hidden="true">↗</span></div><p>글쓰기부터 디자인, 코딩까지.<br>내가 하려는 일에 맞는 AI를 찾아요.</p><span class="shortcut-bottom">분야별 서비스 보기 <span aria-hidden="true">→</span></span></a>
+    <a class="shortcut shortcut-yellow" href="#services" data-action="free"><span class="shortcut-number">02 / START FREE</span><div><h2>부담 없이, 무료로</h2><span class="shortcut-arrow" aria-hidden="true">↗</span></div><p>먼저 가볍게 써 보고 싶다면?<br>무료 서비스를 모아서 확인해요.</p><span class="shortcut-bottom">무료 AI 모아보기 <span aria-hidden="true">→</span></span></a>
+    <a class="shortcut shortcut-blue" href="#services" data-action="reviewed"><span class="shortcut-number">03 / REAL VOICES</span><div><h2>직접 써 보니 어때?</h2><span class="shortcut-arrow" aria-hidden="true">↗</span></div><p>좋았던 점도, 아쉬웠던 점도.<br>조원들이 남긴 솔직한 소감을 읽어요.</p><span class="shortcut-bottom">소감 있는 서비스 보기 <span aria-hidden="true">→</span></span></a>
+  </section>
+
+  <section class="board wrap" id="services" aria-labelledby="boardTitle">
+    <div class="board-head">
+      <div>
+        <p class="kicker">AI SERVICE GUIDE</p>
+        <h2 class="sec-title" id="boardTitle">
+          <span class="sprite sec-icon" data-sprite="cat" data-skin="cream" aria-hidden="true"></span>
+          오늘의 작업에 딱 맞는 AI
+        </h2>
+        <p class="sec-lead">조사한 서비스 <strong id="totalCount">204</strong>개, <strong id="catCount">10</strong>개 분야. 검색과 필터로 나에게 맞는 도구를 찾아보세요.</p>
+      </div>
+      <ul class="price-legend" aria-label="요금 배지 안내">
+        <li><span class="badge badge-free">무료</span> 돈을 내지 않고 사용</li>
+        <li><span class="badge badge-freemium">무료+유료</span> 기본은 무료, 더 쓰려면 결제</li>
+        <li><span class="badge badge-paid">유료</span> 결제해야 사용</li>
+      </ul>
+    </div>
+
+    <div class="app">
+      <aside class="side" id="toolbar">
+        <p class="side-brand">
+          <span class="sprite" data-sprite="cat" data-skin="orange" aria-hidden="true"></span>
+          분야 선택
+        </p>
+        <nav class="tabs" id="tabs" aria-label="분야 선택"></nav>
+      </aside>
+
+      <div class="main">
+        <div class="search">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+          <label class="sr-only" for="search">서비스 검색</label>
+          <input id="search" type="search" placeholder="서비스 찾기 (예: 회의록, 번역, PPT)" autocomplete="off">
+          <button class="search-clear" id="searchClear" type="button" aria-label="검색어 지우기" hidden>&times;</button>
+        </div>
+
+        <section class="filters" aria-label="필터">
+          <div class="scope">
+            <h3 class="scope-title" id="scopeTitle">전체</h3>
+            <p class="scope-desc" id="scopeDesc"></p>
+          </div>
+
+          <div class="filter-row" id="subRow" hidden>
+            <span class="filter-label">세부 분류</span>
+            <div class="chips" id="subChips"></div>
+          </div>
+
+          <div class="filter-row">
+            <span class="filter-label">요금</span>
+            <div class="chips" id="priceChips">
+              <button class="chip is-on" type="button" data-price="all">전체</button>
+              <button class="chip" type="button" data-price="free">무료</button>
+              <button class="chip" type="button" data-price="freemium">무료+유료</button>
+              <button class="chip" type="button" data-price="paid">유료</button>
+            </div>
+            <label class="check">
+              <input type="checkbox" id="onlyReviewed">
+              <span>직접 써본 소감이 있는 것만</span>
+            </label>
+          </div>
+
+          <p class="result" id="result" aria-live="polite"></p>
+        </section>
+
+        <section class="grid" id="grid" aria-label="서비스 목록"></section>
+
+        <div class="more-row" id="moreRow" hidden>
+          <button class="btn btn-line" id="moreBtn" type="button">더 보기</button>
+        </div>
+
+        <div class="empty" id="empty" hidden>
+          <span class="sprite empty-cat" data-sprite="cat" data-skin="gray" data-face="sad" aria-hidden="true"></span>
+          <p class="empty-title">조건에 맞는 서비스가 없다냥</p>
+          <p>검색어를 줄이거나 필터를 풀어 보세요.</p>
+          <button class="btn btn-red btn-sm" id="resetBtn" type="button">필터 모두 지우기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       작업 흐름 + 대시보드 미리보기
+       ========================================================= -->
+
+  <!-- =========================================================
+       캐릭터 소개
+       ========================================================= -->
+  <section class="crew wrap" id="crew" aria-labelledby="crewTitle">
+    <div class="sec-intro">
+      <p class="kicker">MEET THE CREW</p>
+      <h2 class="sec-title" id="crewTitle">픽셀캣 크루를 소개합니다</h2>
+      <p class="sec-lead">취향도, 잘하는 일도 다른 세 마리. AI 탐색을 조금 더 즐겁게.</p>
+    </div>
+    <div class="crew-grid">
+      <article class="crew-card crew-blue">
+        <div class="crew-art"><img src="assets/cats/mackerel.png?v=3" alt="" loading="lazy" width="670" height="677"></div>
+        <div class="crew-body">
+          <p class="crew-role">행동파 고양이 · 고등어</p>
+          <h3 class="crew-name">고등어</h3>
+          <p class="crew-text">고민은 짧게, 실행은 빠르게. 마음에 드는 AI를 찾으면 바로 써 보고 멋진 포즈로 마무리하는 고양이.</p>
+          <p class="crew-quote">“찾았으면 일단 써 보라냥!”</p>
+          <ul class="tags"><li>바로 실행</li><li>직접 써 보기</li><li>문제 해결</li></ul>
+        </div>
+      </article>
+      <article class="crew-card crew-pink">
+        <div class="crew-art"><img src="assets/cats/cream.png?v=3" alt="" loading="lazy" width="687" height="692"></div>
+        <div class="crew-body">
+          <p class="crew-role">호기심 많은 고양이 · 크림</p>
+          <h3 class="crew-name">크림</h3>
+          <p class="crew-text">새로운 AI를 발견할 때마다 진심으로 놀라는 고양이. 처음 쓰는 도구도 일단 즐겁게 탐색해 봅니다.</p>
+          <p class="crew-quote">“와, 이런 기능도 있다냥?!”</p>
+          <ul class="tags"><li>새로운 발견</li><li>아이디어</li><li>호기심</li></ul>
+        </div>
+      </article>
+      <article class="crew-card crew-orange">
+        <div class="crew-art"><img src="assets/cats/cheese.png?v=3" alt="" loading="lazy" width="382" height="396"></div>
+        <div class="crew-body">
+          <p class="crew-role">탐구형 고양이 · 치즈</p>
+          <h3 class="crew-name">치즈</h3>
+          <p class="crew-text">헤드셋을 쓰면 집중 모드 ON. 복잡한 작업을 가볍게 만들어 줄 AI 도구를 찾아다니는 탐구형 고양이.</p>
+          <p class="crew-quote">“일 잘하는 도구, 내가 찾는다냥.”</p>
+          <ul class="tags"><li>AI 분석</li><li>업무 자동화</li><li>데이터 정리</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       써 본 소감 (직접 써본 소감 데이터에서 불러옴)
+       ========================================================= -->
+  <section class="reviews-sec wrap" id="reviews" aria-labelledby="reviewsTitle">
+    <div class="sec-intro">
+      <p class="kicker">REVIEWS</p>
+      <h2 class="sec-title" id="reviewsTitle">직접 써 본 사람들의 솔직한 후기</h2>
+      <p class="sec-lead">조원들이 AI 서비스를 실제로 써 보고 남긴 소감입니다. 장점도 아쉬운 점도 그대로 담았어요.</p>
+    </div>
+    <div class="review-grid" id="reviewGrid"></div>
+  </section>
+
+  <!-- =========================================================
+       AI 서비스 도감 (분야 · 요금 · 검색 필터)
+       ========================================================= -->
+
+  <!-- =========================================================
+       하단 CTA
+       ========================================================= -->
+  <section class="flowsec wrap" id="demo" aria-labelledby="flowTitle">
+    <div class="demo-intro"><p class="kicker">WORKFLOW PREVIEW</p><p>아래는 AI 활용을 설명하는 <strong>인터랙티브 예시 화면</strong>입니다. 이 사이트에서 실제 파일 업로드·분석·리포트 다운로드를 제공하는 것은 아닙니다.</p></div>
+    <div class="flow-card">
+      <div class="flow-head">
+        <h2 class="sec-title" id="flowTitle">
+          <span class="sprite sec-icon" data-sprite="chart" aria-hidden="true"></span>
+          AI로 달라지는 업무 흐름
+        </h2>
+        <ol class="steps" id="steps" aria-label="작업 단계">
+          <li><button class="step step-pink is-on" type="button" data-step="0" aria-pressed="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M12 17v-6M9 14l3-3 3 3"/></svg>업로드</button></li>
+          <li><button class="step step-orange" type="button" data-step="1" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M10 20V6M15 20v-9M20 20V9"/></svg>분석</button></li>
+          <li><button class="step step-blue" type="button" data-step="2" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>리포트</button></li>
+          <li><button class="step step-green" type="button" data-step="3" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>완료</button></li>
+        </ol>
+      </div>
+
+      <!-- 대시보드 미리보기 -->
+      <div class="dash" id="dash" data-step="0">
+        <aside class="dash-side" aria-label="대시보드 메뉴 (미리보기)">
+          <p class="dash-logo">
+            <span class="sprite" data-sprite="cat" data-skin="orange" data-acc="headphones" aria-hidden="true"></span>
+            픽셀캣 AI
+          </p>
+          <nav class="dash-nav">
+            <button type="button" class="is-on" data-step="3">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg>대시보드</button>
+            <button type="button" data-step="0">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h7l2 2h9v11H3z"/></svg>파일 업로드</button>
+            <button type="button" data-step="1">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M10 20V6M15 20v-9M20 20V9"/></svg>AI 분석</button>
+            <button type="button" data-step="2">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>리포트</button>
+            <button type="button" data-step="3">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>작업 내역</button>
+          </nav>
+          <div class="dash-buddy">
+            <span class="sprite" data-sprite="cat" data-skin="orange" data-face="focus" data-acc="headphones" aria-hidden="true"></span>
+            <p><b>치즈</b>가 열심히<br>분석하고 있어요</p>
+            <span class="meter"><i id="buddyMeter"></i></span>
+          </div>
+        </aside>
+
+        <div class="dash-main">
+          <div class="dash-top">
+            <p class="dash-file">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13l2 2 4-4"/></svg>
+              <span>2024_상반기_매출.xlsx</span>
+            </p>
+            <p class="dash-status" id="dashStatus"><span class="dot"></span><span id="dashStatusText">업로드 완료</span></p>
+            <span class="sample-tag">예시 데이터</span>
+          </div>
+
+          <ul class="kpis" aria-label="요약 지표 (예시)">
+            <li class="kpi kpi-pink" data-zone="3">
+              <span class="kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg></span>
+              <span class="kpi-label">분석한 파일 수</span>
+              <strong class="kpi-num" data-count="24">24</strong>
+              <span class="kpi-delta">▲ 33%</span>
+            </li>
+            <li class="kpi kpi-blue" data-zone="3">
+              <span class="kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V12M10 20V6M15 20v-9M20 20V9"/></svg></span>
+              <span class="kpi-label">추출한 인사이트</span>
+              <strong class="kpi-num" data-count="128">128</strong>
+              <span class="kpi-delta">▲ 52%</span>
+            </li>
+            <li class="kpi kpi-orange" data-zone="3">
+              <span class="kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span>
+              <span class="kpi-label">생성한 리포트</span>
+              <strong class="kpi-num" data-count="18">18</strong>
+              <span class="kpi-delta">▲ 80%</span>
+            </li>
+            <li class="kpi kpi-green" data-zone="3">
+              <span class="kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <span class="kpi-label">절약한 시간</span>
+              <strong class="kpi-num" data-count="12.5" data-unit="시간">12.5시간</strong>
+              <span class="kpi-delta">▲ 65%</span>
+            </li>
+          </ul>
+
+          <div class="dash-grid">
+            <!-- 표 미리보기 -->
+            <section class="panel panel-sheet" data-zone="0" aria-labelledby="sheetTitle">
+              <h3 class="panel-title" id="sheetTitle">데이터 미리보기 <span class="panel-sub">6행 · 5열</span></h3>
+              <div class="sheet-wrap">
+                <table class="sheet">
+                  <thead>
+                    <tr><th scope="col"></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th><th scope="col">E</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr class="sheet-head"><th scope="row">1</th><td>날짜</td><td>제품군</td><td>매출액</td><td>수량</td><td>지역</td></tr>
+                    <tr><th scope="row">2</th><td>2024-01-01</td><td>음료</td><td class="num">1,240,000</td><td class="num">124</td><td>서울</td></tr>
+                    <tr><th scope="row">3</th><td>2024-01-02</td><td>스낵</td><td class="num">980,000</td><td class="num">98</td><td>부산</td></tr>
+                    <tr><th scope="row">4</th><td>2024-01-03</td><td>커피</td><td class="num">1,560,000</td><td class="num">156</td><td>서울</td></tr>
+                    <tr><th scope="row">5</th><td>2024-01-04</td><td>음료</td><td class="num">1,320,000</td><td class="num">132</td><td>대구</td></tr>
+                    <tr><th scope="row">6</th><td>2024-01-05</td><td>디저트</td><td class="num">1,110,000</td><td class="num">87</td><td>인천</td></tr>
+                    <tr><th scope="row">7</th><td>2024-01-06</td><td>음료</td><td class="num">1,480,000</td><td class="num">148</td><td>서울</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- 차트 -->
+            <section class="panel panel-chart" data-zone="1" aria-labelledby="chartTitle">
+              <div class="panel-row">
+                <h3 class="panel-title" id="chartTitle">매출 추이 분석</h3>
+                <div class="seg" id="chartSeg" role="group" aria-label="기간 단위">
+                  <button type="button" class="is-on" data-range="month" aria-pressed="true">월별</button>
+                  <button type="button" data-range="week" aria-pressed="false">주별</button>
+                </div>
+              </div>
+              <ul class="legend">
+                <li><span class="key key-bar"></span>일평균 매출</li>
+                <li><span class="key key-line"></span>목표</li>
+              </ul>
+              <div class="chart" id="chart"></div>
+              <p class="sr-only" id="chartSummary"></p>
+            </section>
+
+            <!-- AI 인사이트 -->
+            <section class="panel panel-insight" data-zone="2" aria-labelledby="insightTitle">
+              <h3 class="panel-title" id="insightTitle">
+                <svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg>
+                AI 인사이트 요약
+              </h3>
+              <ol class="insights">
+                <li>음료 제품군이 전체 매출의 <b>42%</b>를 차지하며 가장 높은 성장세를 보였습니다.</li>
+                <li>3월 일평균 매출이 전월 대비 <b>59%</b> 증가했습니다.</li>
+                <li>5월 일평균 매출이 <b>171만 원</b>으로 상반기 최고치를 기록했습니다.</li>
+              </ol>
+              <a class="report-btn" href="#demo" data-step="3">
+                <span class="sprite" data-sprite="doc" aria-hidden="true"></span>
+                완료 단계 미리보기
+              </a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing-cta wrap" aria-labelledby="ctaTitle">
+    <div class="closing-copy">
+      <p class="mini-label">READY WHEN YOU ARE</p>
+      <h2 id="ctaTitle">다음 최애 AI,<br>여기서 만나보세요.</h2>
+      <p>어려운 선택은 가볍게. 새로운 가능성은 더 가까이.</p>
+      <a class="btn btn-red btn-lg" href="#services" data-action="all">내게 맞는 AI 찾기 <span aria-hidden="true">↗</span></a>
+    </div>
+    <figure class="closing-sticker banana-sticker">
+      <img src="assets/cats/banana-cat-pixel.png?v=4" alt="노란 바나나 옷을 입고 눈물을 글썽이는 귀여운 픽셀 고양이" loading="lazy" width="1254" height="1254">
+      <figcaption>LET'S FIND YOUR AI! <span aria-hidden="true">♥</span></figcaption>
+    </figure>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-brand">
+        <span class="sprite" data-sprite="cat" data-skin="orange" data-acc="headphones" aria-hidden="true"></span>
+        픽셀캣 AI
+      </p>
+      <nav class="footer-nav" aria-label="바닥 메뉴">
+        <a href="#features">서비스 소개</a>
+        <a href="#demo">업무 흐름 예시</a>
+        <a href="#crew">크루 소개</a>
+        <a href="#reviews">써 본 소감</a>
+        <a href="#services">AI 서비스 도감</a>
+      </nav>
+      <div class="footer-notes">
+        <p>대시보드 화면의 숫자와 표는 기능을 보여 주기 위한 예시 데이터입니다.</p>
+        <p>AI 서비스 설명과 요금은 제공된 조사 자료를 기준으로 표시합니다. 최신 정보는 각 서비스 공식 사이트에서 확인하세요. 서비스 로고는 각 사이트의 파비콘을 불러와 표시합니다.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="맨 위로" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- 데이터 → 픽셀 그림 → 랜딩 동작 → 서비스 도감 동작 -->
+  <script src="js/services.js"></script>
+  <script src="js/pixel.js"></script>
+  <script src="js/landing.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/design.js"></script>
+</body>
+</html>
