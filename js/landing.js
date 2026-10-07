@@ -25,6 +25,13 @@
   const steps = document.querySelectorAll("#steps .step");
   const navBtns = document.querySelectorAll(".dash-nav button");
   const STATUS = ["업로드 완료", "AI 분석 중", "리포트 생성 중", "분석 완료"];
+  // 단계별 고양이 안내 (상태 표시와 같은 단계를 말하도록)
+  const BUDDY = [
+    "<b>치즈</b>가 예시 파일을<br>받아 왔다냥.",
+    "<b>치즈</b>가 열심히<br>분석하고 있어요.",
+    "<b>치즈</b>가 리포트를<br>정리하는 중이다냥.",
+    "분석 완료!<br><b>수고했다냥.</b>",
+  ];
   const NAV_FOR_STEP = [1, 2, 3, 0];  // 단계별로 켜질 사이드바 메뉴 위치
 
   let current = 0;
@@ -43,6 +50,7 @@
     navBtns.forEach((b, n) => b.classList.toggle("is-on", n === nav));
     $("dashStatusText").textContent = STATUS[i];
     $("dashStatus").dataset.state = i === 3 ? "done" : "busy";
+    if ($("buddyText")) $("buddyText").innerHTML = BUDDY[i];
     $("buddyMeter").style.width = (i + 1) * 25 + "%";
   }
 
@@ -223,6 +231,10 @@
       b.classList.toggle("is-on", b === btn);
       b.setAttribute("aria-pressed", b === btn);
     });
+    // 인사이트 문장은 월별 예시 기준이므로, 주별 차트를 볼 때는 그 점을 알려 줌
+    if ($("insightNote")) $("insightNote").textContent = range === "week"
+      ? "지금은 주별 차트를 보고 있어요. 아래 인사이트는 월별 예시 기준이에요."
+      : "월별 차트 기준으로 정리한 예시 문장이에요.";
     drawChart();
   });
 

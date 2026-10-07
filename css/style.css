@@ -580,7 +580,7 @@ a { color: inherit; }
   grid-template-columns: 216px minmax(0, 1fr);
   gap: 14px;
   padding: 14px;
-  background: #F6F1F2;
+  background: #F6ECDF;
   border: 1px solid var(--line);
   border-radius: 20px;
 }
@@ -761,7 +761,7 @@ a { color: inherit; }
 .sheet th:first-child { border-left: 0; }
 .sheet .sheet-head td { background: #FFF7E3; font-weight: 700; }
 .sheet .num { text-align: right; font-variant-numeric: tabular-nums; }
-.sheet tbody tr:hover td { background: #FFF4F6; }
+.sheet tbody tr:hover td { background: #FFF3E0; }
 
 /* 차트 */
 .seg { display: inline-flex; padding: 3px; background: #F4EEF0; border-radius: 9px; }
@@ -834,15 +834,15 @@ a { color: inherit; }
 .chart-tip em { font-style: normal; color: #FFD9A0; }
 
 /* AI 인사이트 */
-.panel-insight { background: linear-gradient(180deg, #FFF1F4, #FFFFFF 85%); display: flex; flex-direction: column; }
+.panel-insight { background: linear-gradient(180deg, #FDF0E1, var(--card) 85%); display: flex; flex-direction: column; }
 .bulb { width: 20px; height: 20px; fill: #FFE07A; stroke: #C98A0B; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .insights { list-style: none; counter-reset: ins; display: grid; gap: 10px; margin: 0 0 12px; padding: 0; }
 .insights li {
   counter-increment: ins;
   position: relative;
   padding: 9px 10px 9px 40px;
-  background: #fff;
-  border: 1px solid #FBDCE3;
+  background: var(--card);
+  border: 1px solid #F0DCC6;
   border-radius: 10px;
   font-size: 0.84rem;
   line-height: 1.5;
@@ -868,14 +868,14 @@ a { color: inherit; }
   justify-content: center;
   gap: 8px;
   padding: 9px 12px;
-  border: 1.5px dashed #F4A9BA;
+  border: 1.5px dashed #E2B59A;
   border-radius: 10px;
   font-size: 0.86rem;
   font-weight: 700;
   color: var(--red-dark);
   text-decoration: none;
 }
-.report-btn:hover { background: #FFE9EE; }
+.report-btn:hover { background: #FBE3D6; }
 .report-btn .sprite { width: 16px; }
 
 /* ---------------------------------------------------------------------
