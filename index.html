@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 
   <link rel="stylesheet" href="css/style.css?v=2">
-  <link rel="stylesheet" href="css/redesign.css?v=6">
+  <link rel="stylesheet" href="css/redesign.css?v=9">
 </head>
 <body>
   <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -375,8 +375,15 @@
       <p>어려운 선택은 가볍게. 새로운 가능성은 더 가까이.</p>
       <a class="btn btn-red btn-lg" href="#services" data-action="all">내게 맞는 AI 찾기 <span aria-hidden="true">↗</span></a>
     </div>
-    <figure class="closing-photo">
-      <img src="assets/illustrations/whining-bed.webp" alt="침대에 누워 웃으며 이쪽을 바라보는 사람의 픽셀 일러스트" loading="lazy" width="1400" height="764">
+    <figure class="closing-photo" id="closingPhoto">
+      <img id="closingPhotoImg" src="assets/illustrations/whining-bed.webp" alt="침대에 누워 웃으며 이쪽을 바라보는 사람의 픽셀 일러스트" loading="lazy" width="1400" height="764">
+      <!-- 처음에는 가려 두고, 원하는 사람만 열어 보게 함 -->
+      <div class="photo-cover" id="photoCover">
+        <p class="photo-warn"><span aria-hidden="true">⚠</span> 경고</p>
+        <p class="photo-warn-text">보고 싶으면 열어요.</p>
+        <button class="btn btn-line btn-sm" id="photoOpen" type="button" aria-controls="closingPhotoImg" aria-expanded="false">열어 보기</button>
+      </div>
+      <button class="photo-close" id="photoClose" type="button" aria-controls="closingPhotoImg" aria-expanded="true" hidden>닫기 <span aria-hidden="true">×</span></button>
     </figure>
   </section>
 
@@ -411,6 +418,6 @@
   <script src="js/pixel.js"></script>
   <script src="js/landing.js?v=2"></script>
   <script src="js/app.js"></script>
-  <script src="js/design.js"></script>
+  <script src="js/design.js?v=2"></script>
 </body>
 </html>

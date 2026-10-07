@@ -22,6 +22,21 @@
   document.querySelectorAll('[data-stat="services"]').forEach(el => { el.textContent = SERVICES.length; });
   document.querySelectorAll('[data-stat="categories"]').forEach(el => { el.textContent = CATEGORIES.length; });
   // These counts update automatically when Claude updates services.js.
+
+  // 하단 배너 일러스트: 경고 문구로 가려 두고, 열기/닫기로 보여 줌
+  const photo = document.getElementById('closingPhoto');
+  const photoOpen = document.getElementById('photoOpen');
+  const photoClose = document.getElementById('photoClose');
+  function setPhoto(open) {
+    photo.classList.toggle('is-open', open);
+    document.getElementById('photoCover').hidden = open;
+    photoClose.hidden = !open;
+    (open ? photoClose : photoOpen).focus();
+  }
+  if (photo && photoOpen && photoClose) {
+    photoOpen.addEventListener('click', function () { setPhoto(true); });
+    photoClose.addEventListener('click', function () { setPhoto(false); });
+  }
   const reviews = document.getElementById('reviewGrid');
   if (!reviews.children.length) {
     const empty = document.createElement('p');
